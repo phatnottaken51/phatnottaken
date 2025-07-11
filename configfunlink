@@ -46,11 +46,5 @@
     "origin": "https://chisholmunitedfc.com",
     "href": "https://chisholmunitedfc.com/",
     "waitTime": 45
-  },
-  "sunwin": {
-    "name": "sunwin",
-    "origin": "https://play-sun2.com",
-    "href": "https://play-sun2.com/",
-    "waitTime": 45
   }
 }
