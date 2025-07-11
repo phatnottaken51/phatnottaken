@@ -40,5 +40,11 @@
     "origin": "https://dennys.eu.com",
     "href": "https://dennys.eu.com/",
     "waitTime": 45
+  },
+  "top 10 trang cá cược bóng đá": {
+    "name": "top 10 trang cá cược bóng đá",
+    "origin": "https://chisholmunitedfc.com",
+    "href": "https://chisholmunitedfc.com/",
+    "waitTime": 45
   }
 }
