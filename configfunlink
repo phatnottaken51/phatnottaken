@@ -40,5 +40,11 @@
     "origin": "https://dennys.eu.com",
     "href": "https://dennys.eu.com/",
     "waitTime": 45
+  },
+  "sunwin": {
+    "name": "sunwin",
+    "origin": "https://play-sun2.com",
+    "href": "https://play-sun2.com/",
+    "waitTime": 45
   }
 }
