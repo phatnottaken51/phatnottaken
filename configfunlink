@@ -1,0 +1,44 @@
+{
+  "188bet": {
+    "name": "188bet",
+    "origin": "https://88bet.hiphop",
+    "href": "https://88bet.hiphop/cach-tinh-tien-bat-ty-so-bong-da/",
+    "waitTime": 45
+  },
+  "w88": {
+    "name": "W88",
+    "origin": "https://w88vt.com",
+    "href": "https://w88vt.com/",
+    "waitTime": 45
+  },
+  "fun88": {
+    "name": "Fun88",
+    "origin": "https://fun88kyc.com",
+    "href": "https://fun88kyc.com/",
+    "waitTime": 45
+  },
+  "daga": {
+    "name": "Daga",
+    "origin": "https://stelizabeth.co.uk",
+    "href": "https://stelizabeth.co.uk/",
+    "waitTime": 60
+  },
+  "az888": {
+    "name": "AZ888",
+    "origin": "https://az888.wiki",
+    "href": "https://az888.wiki/",
+    "waitTime": 45
+  },
+  "sunwin": {
+    "name": "Sunwin",
+    "origin": "https://allpack.eu.com",
+    "href": "https://allpack.eu.com/",
+    "waitTime": 45
+  }
+  "m88lu": {
+    "name": "m88lu",
+    "origin": "https://m88lu.io",
+    "href": "https://m88lu.io/",
+    "waitTime": 45
+  }
+}
