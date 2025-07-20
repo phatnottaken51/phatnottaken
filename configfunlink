@@ -35,12 +35,6 @@
     "href": "https://m88lu.io/",
     "waitTime": 45
   },
-  "v9bet design": {
-    "name": "v9bet design",
-    "origin": "https://dennys.eu.com",
-    "href": "https://dennys.eu.com/",
-    "waitTime": 45
-  },
   "top 10 trang cá cược bóng đá": {
     "name": "top 10 trang cá cược bóng đá",
     "origin": "https://chisholmunitedfc.com",
@@ -107,8 +101,14 @@
     "href": "https://cruzrojasinaloa.org.mx/",
     "waitTime": 45
   },
-  "S666": {
-    "name": "S666",
+  "v9bet": {
+    "name": "v9bet",
+    "origin": "https://dennys.eu.com",
+    "href": "https://dennys.eu.com/",
+    "waitTime": 45
+  },
+  "s666": {
+    "name": "s666",
     "origin": "https://fireworks.eu.com",
     "href": "https://fireworks.eu.com/",
     "waitTime": 45
