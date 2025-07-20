@@ -274,5 +274,11 @@
     "origin": "https://gk88.estate",
     "href": "https://gk88.estate/",
     "waitTime": 45
+  },
+  "789club": {
+    "name": "789club",
+    "origin": "https://rami.uk.com",
+    "href": "https://rami.uk.com/",
+    "waitTime": 45
   }
 }
