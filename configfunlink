@@ -149,12 +149,6 @@
     "href": "https://pollstation.uk/",
     "waitTime": 45
   },
-  "12bet": {
-    "name": "12bet",
-    "origin": "https://coway.us.com",
-    "href": "https://coway.us.com/",
-    "waitTime": 45
-  },
   "đá gà thomo hippo": {
     "name": "đá gà thomo hippo",
     "origin": "https://hippostudios.co.uk",
@@ -231,6 +225,24 @@
     "name": "az888 reasyn",
     "origin": "https://reasyn.io",
     "href": "https://reasyn.io/",
+    "waitTime": 45
+  },
+  "ok9cool": {
+    "name": "ok9cool",
+    "origin": "https://optidigital.ca",
+    "href": "https://optidigital.ca/",
+    "waitTime": 45
+  },
+  "12bet bpd": {
+    "name": "12bet bpd",
+    "origin": "https://bpd.uk.com",
+    "href": "https://bpd.uk.com/",
+    "waitTime": 45
+  },
+  "12bet coway": {
+    "name": "121bet coway",
+    "origin": "https://coway.us.com",
+    "href": "https://coway.us.com/",
     "waitTime": 45
   }
 }
