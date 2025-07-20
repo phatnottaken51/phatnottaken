@@ -178,5 +178,11 @@
     "origin": "https://forextra.io",
     "href": "https://forextra.io/",
     "waitTime": 45
+  },
+  "sunwin imp": {
+    "name": "sunwin imp",
+    "origin": "https://imp.eu.com",
+    "href": "https://imp.eu.com/",
+    "waitTime": 45
   }
 }
