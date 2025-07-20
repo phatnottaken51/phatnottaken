@@ -286,5 +286,11 @@
     "origin": "https://sp8.lat",
     "href": "https://sp8.lat/",
     "waitTime": 45
+  },
+  "ae888 findout": {
+    "name": "ae888 findout",
+    "origin": "https://findout.eu.com",
+    "href": "https://findout.eu.com/",
+    "waitTime": 45
   }
 }
