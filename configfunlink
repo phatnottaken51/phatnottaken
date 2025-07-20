@@ -64,5 +64,11 @@
     "origin": "https://caraworldcamranh.land",
     "href": "https://caraworldcamranh.land/",
     "waitTime": 45
+  },
+  "kubet": {
+    "name": "kubet",
+    "origin": "https://www.randalls.uk.com",
+    "href": "https://www.randalls.uk.com/",
+    "waitTime": 45
   }
 }
