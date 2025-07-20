@@ -70,5 +70,11 @@
     "origin": "https://www.randalls.uk.com",
     "href": "https://www.randalls.uk.com/",
     "waitTime": 45
+  },
+  "az888 reasyn.io": {
+    "name": "az888 reasyn.io",
+    "origin": "https://reasyn.io",
+    "href": "https://reasyn.io/",
+    "waitTime": 45
   }
 }
