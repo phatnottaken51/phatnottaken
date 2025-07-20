@@ -154,5 +154,11 @@
     "origin": "https://e-shopline.eu.com",
     "href": "https://e-shopline.eu.com/",
     "waitTime": 45
+  },
+  "kubet pilates": {
+    "name": "kubet pilates",
+    "origin": "https://just-pilates.uk.com",
+    "href": "https://just-pilates.uk.com/",
+    "waitTime": 45
   }
 }
