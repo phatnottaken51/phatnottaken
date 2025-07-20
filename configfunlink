@@ -232,5 +232,11 @@
     "origin": "https://cashoutnow.us.com",
     "href": "https://cashoutnow.us.com/",
     "waitTime": 45
+  },
+  "ae888 school": {
+    "name": "ae888 school",
+    "origin": "https://school.ru.com",
+    "href": "https://school.ru.com/",
+    "waitTime": 45
   }
 }
