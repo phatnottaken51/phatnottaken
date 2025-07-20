@@ -82,5 +82,11 @@
     "origin": "https://baqua.org.uk",
     "href": "https://baqua.org.uk/",
     "waitTime": 45
+  },
+  "hello88 đăng nhập": {
+    "name": "hello88 đăng nhập",
+    "origin": "https://afzoone.co.com",
+    "href": "https://afzoone.co.com/",
+    "waitTime": 45
   }
 }
