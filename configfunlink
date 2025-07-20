@@ -191,12 +191,6 @@
     "href": "https://teka.ru.com/",
     "waitTime": 45
   },
-  "đá gà thomo hippo": {
-    "name": "đá gà thomo hippo",
-    "origin": "https://hippostudios.co.uk",
-    "href": "https://hippostudios.co.uk/",
-    "waitTime": 45
-  },
   "daga88": {
     "name": "daga88",
     "origin": "https://pollstation.uk",
@@ -207,6 +201,12 @@
     "name": "12bet",
     "origin": "https://coway.us.com",
     "href": "https://coway.us.com/",
+    "waitTime": 45
+  },
+  "đá gà thomo hippo": {
+    "name": "đá gà thomo hippo",
+    "origin": "https://hippostudios.co.uk",
+    "href": "https://hippostudios.co.uk/",
     "waitTime": 45
   }
 }
