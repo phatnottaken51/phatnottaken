@@ -136,5 +136,11 @@
     "origin": "https://ihra.co.com",
     "href": "https://ihra.co.com/",
     "waitTime": 45
+  },
+  "sunwin vl": {
+    "name": "sunwin vl",
+    "origin": "https://sunvl.win",
+    "href": "https://sunvl.win/",
+    "waitTime": 45
   }
 }
