@@ -250,5 +250,11 @@
     "origin": "https://fireworks.eu.com",
     "href": "https://fireworks.eu.com/",
     "waitTime": 45
+  },
+  "tỷ lệ cá cược": {
+    "name": "tỷ lệ cá cược",
+    "origin": "https://tylekeonhacai.ru.com",
+    "href": "https://tylekeonhacai.ru.com/",
+    "waitTime": 45
   }
 }
