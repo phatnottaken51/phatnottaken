@@ -101,12 +101,6 @@
     "href": "https://just-pilates.uk.com/",
     "waitTime": 45
   },
-  "dola789": {
-    "name": "dola789",
-    "origin": "https://hi21.ru.com",
-    "href": "https://hi21.ru.com/",
-    "waitTime": 45
-  },
   "fb88 free": {
     "name": "fb88 free",
     "origin": "https://fb88.free",
@@ -291,6 +285,18 @@
     "name": "ae888 findout",
     "origin": "https://findout.eu.com",
     "href": "https://findout.eu.com/",
+    "waitTime": 45
+  },
+  "dola789 fdb": {
+    "name": "dola789 fdb",
+    "origin": "https://fdb.jpn.com",
+    "href": "https://fdb.jpn.com/",
+    "waitTime": 45
+  },
+  "dola789 ru": {
+    "name": "dola789 ru",
+    "origin": "https://hi21.ru.com",
+    "href": "https://hi21.ru.com/",
     "waitTime": 45
   }
 }
