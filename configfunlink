@@ -256,5 +256,11 @@
     "origin": "https://tylekeonhacai.ru.com",
     "href": "https://tylekeonhacai.ru.com/",
     "waitTime": 45
+  },
+  "m88": {
+    "name": "m88",
+    "origin": "https://m88lu.io",
+    "href": "https://m88lu.io/",
+    "waitTime": 45
   }
 }
