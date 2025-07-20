@@ -23,12 +23,6 @@
     "href": "https://caraworldcamranh.land/",
     "waitTime": 45
   },
-  "az888 reasyn.io": {
-    "name": "az888 reasyn.io",
-    "origin": "https://reasyn.io",
-    "href": "https://reasyn.io/",
-    "waitTime": 45
-  },
   "kubet tcc": {
     "name": "kubet tcc",
     "origin": "https://tcc.eu.com",
@@ -231,6 +225,12 @@
     "name": "web cá độ mu",
     "origin": "https://chisholmunitedfc.com",
     "href": "https://chisholmunitedfc.com/",
+    "waitTime": 45
+  },
+  "az888 reasyn": {
+    "name": "az888 reasyn",
+    "origin": "https://reasyn.io",
+    "href": "https://reasyn.io/",
     "waitTime": 45
   }
 }
