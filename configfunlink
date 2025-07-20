@@ -226,5 +226,11 @@
     "origin": "https://kubet.ru.com",
     "href": "https://kubet.ru.com/",
     "waitTime": 45
+  },
+  "iwin cashout": {
+    "name": "iwin cashout",
+    "origin": "https://cashoutnow.us.com",
+    "href": "https://cashoutnow.us.com/",
+    "waitTime": 45
   }
 }
