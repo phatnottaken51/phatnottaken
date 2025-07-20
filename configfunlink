@@ -47,12 +47,6 @@
     "href": "https://caraworldcamranh.land/",
     "waitTime": 45
   },
-  "kubet": {
-    "name": "kubet",
-    "origin": "https://www.randalls.uk.com",
-    "href": "https://www.randalls.uk.com/",
-    "waitTime": 45
-  },
   "az888 reasyn.io": {
     "name": "az888 reasyn.io",
     "origin": "https://reasyn.io",
@@ -243,6 +237,12 @@
     "name": "fun88",
     "origin": "https://fun88kyc.com",
     "href": "https://fun88kyc.com/",
+    "waitTime": 45
+  },
+  "kubet casino": {
+    "name": "kubet casino",
+    "origin": "https://www.randalls.uk.com",
+    "href": "https://www.randalls.uk.com/",
     "waitTime": 45
   }
 }
