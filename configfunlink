@@ -172,5 +172,11 @@
     "origin": "https://www.allstarstrainers.uk.com",
     "href": "https://www.allstarstrainers.uk.com/",
     "waitTime": 45
+  },
+  "e2bet forextra": {
+    "name": "e2bet forextra",
+    "origin": "https://forextra.io",
+    "href": "https://forextra.io/",
+    "waitTime": 45
   }
 }
