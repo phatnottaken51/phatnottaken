@@ -5,28 +5,10 @@
     "href": "https://88bet.hiphop/cach-tinh-tien-bat-ty-so-bong-da/",
     "waitTime": 45
   },
-  "daga": {
-    "name": "Daga",
-    "origin": "https://stelizabeth.co.uk",
-    "href": "https://stelizabeth.co.uk/",
-    "waitTime": 60
-  },
-  "az888": {
-    "name": "AZ888",
-    "origin": "https://az888.wiki",
-    "href": "https://az888.wiki/",
-    "waitTime": 45
-  },
   "m88lu": {
     "name": "m88lu",
     "origin": "https://m88lu.io",
     "href": "https://m88lu.io/",
-    "waitTime": 45
-  },
-  "top 10 trang cá cược bóng đá": {
-    "name": "top 10 trang cá cược bóng đá",
-    "origin": "https://chisholmunitedfc.com",
-    "href": "https://chisholmunitedfc.com/",
     "waitTime": 45
   },
   "8xbet vina": {
@@ -249,6 +231,12 @@
     "name": "nhà cái tinchat",
     "origin": "https://tinchat.info",
     "href": "https://tinchat.info/",
+    "waitTime": 45
+  },
+  "web cá độ mu": {
+    "name": "web cá độ mu",
+    "origin": "https://chisholmunitedfc.com",
+    "href": "https://chisholmunitedfc.com/",
     "waitTime": 45
   }
 }
