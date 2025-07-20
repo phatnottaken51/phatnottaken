@@ -89,16 +89,16 @@
     "href": "https://afzoone.co.com/",
     "waitTime": 45
   },
-  "abc8  abc8.memorial": {
-    "name": "abc8  abc8.memorial",
-    "origin": "https://abc8.memorial",
-    "href": "https://abc8.memorial/",
-    "waitTime": 45
-  },
   "kubet tcc": {
     "name": "kubet tcc",
     "origin": "https://tcc.eu.com",
     "href": "https://tcc.eu.com/",
+    "waitTime": 45
+  },
+  "kèo nhà cái lisa": {
+    "name": "kèo nhà cái lisa",
+    "origin": "https://lisatuttle.co.uk",
+    "href": "https://lisatuttle.co.uk/",
     "waitTime": 45
   }
 }
