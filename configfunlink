@@ -58,5 +58,11 @@
     "origin": "https://ael1.com",
     "href": "https://ael1.com/",
     "waitTime": 45
+  },
+  "caraworld": {
+    "name": "caraworld",
+    "origin": "https://caraworldcamranh.land",
+    "href": "https://caraworldcamranh.land/",
+    "waitTime": 45
   }
 }
