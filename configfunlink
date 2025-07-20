@@ -142,5 +142,11 @@
     "origin": "https://sunvl.win",
     "href": "https://sunvl.win/",
     "waitTime": 45
+  },
+  "thabet john": {
+    "name": "thabet john",
+    "origin": "https://huobi.co.com",
+    "href": "https://huobi.co.com/",
+    "waitTime": 45
   }
 }
