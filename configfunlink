@@ -77,12 +77,6 @@
     "href": "https://baqua.org.uk/",
     "waitTime": 45
   },
-  "hello88 đăng nhập": {
-    "name": "hello88 đăng nhập",
-    "origin": "https://afzoone.co.com",
-    "href": "https://afzoone.co.com/",
-    "waitTime": 45
-  },
   "kubet tcc": {
     "name": "kubet tcc",
     "origin": "https://tcc.eu.com",
@@ -111,6 +105,18 @@
     "name": "s666",
     "origin": "https://fireworks.eu.com",
     "href": "https://fireworks.eu.com/",
+    "waitTime": 45
+  },
+  "df999": {
+    "name": "df999",
+    "origin": "https://nhacaidf999.site",
+    "href": "https://nhacaidf999.site/",
+    "waitTime": 45
+  },
+  "hello88": {
+    "name": "hello88",
+    "origin": "https://afzoone.co.com",
+    "href": "https://afzoone.co.com/",
     "waitTime": 45
   }
 }
