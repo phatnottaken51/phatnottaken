@@ -155,12 +155,6 @@
     "href": "https://hippostudios.co.uk/",
     "waitTime": 45
   },
-  "sv388": {
-    "name": "sv388",
-    "origin": "https://genericanafranil.us.com",
-    "href": "https://genericanafranil.us.com/",
-    "waitTime": 45
-  },
   "bong88 wiki": {
     "name": "bong88 wiki",
     "origin": "https://amulet.in.net",
@@ -243,6 +237,12 @@
     "name": "121bet coway",
     "origin": "https://coway.us.com",
     "href": "https://coway.us.com/",
+    "waitTime": 45
+  },
+  "sv388 ph": {
+    "name": "sv388 ph",
+    "origin": "https://genericforlipitor.us.com",
+    "href": "https://genericforlipitor.us.com/",
     "waitTime": 45
   }
 }
