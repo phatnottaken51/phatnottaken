@@ -281,10 +281,10 @@
     "href": "https://rami.uk.com/",
     "waitTime": 45
   },
-  "sunwin revive": {
-    "name": "sunwin revive",
-    "origin": "https://www.revive.uk.com",
-    "href": "https://www.revive.uk.com/",
+  "sp8": {
+    "name": "sp8",
+    "origin": "https://sp8.lat",
+    "href": "https://sp8.lat/",
     "waitTime": 45
   }
 }
