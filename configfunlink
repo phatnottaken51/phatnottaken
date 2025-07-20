@@ -268,5 +268,11 @@
     "origin": "https://abc8.memorial",
     "href": "https://abc8.memorial/",
     "waitTime": 45
+  },
+  "gk88 estate": {
+    "name": "gk88 estate",
+    "origin": "https://gk88.estate",
+    "href": "https://gk88.estate/",
+    "waitTime": 45
   }
 }
