@@ -184,5 +184,23 @@
     "origin": "https://imp.eu.com",
     "href": "https://imp.eu.com/",
     "waitTime": 45
+  },
+  "bong88": {
+    "name": "bong88",
+    "origin": "https://teka.ru.com",
+    "href": "https://teka.ru.com/",
+    "waitTime": 45
+  },
+  "đá gà thomo hippo": {
+    "name": "đá gà thomo hippo",
+    "origin": "https://hippostudios.co.uk",
+    "href": "https://hippostudios.co.uk/",
+    "waitTime": 45
+  },
+  "daga88": {
+    "name": "daga88",
+    "origin": "https://pollstation.uk",
+    "href": "https://pollstation.uk/",
+    "waitTime": 45
   }
 }
