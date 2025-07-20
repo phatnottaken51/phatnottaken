@@ -53,12 +53,6 @@
     "href": "https://reasyn.io/",
     "waitTime": 45
   },
-  "đá gà trực tiếp": {
-    "name": "đá gà trực tiếp",
-    "origin": "https://baqua.org.uk",
-    "href": "https://baqua.org.uk/",
-    "waitTime": 45
-  },
   "kubet tcc": {
     "name": "kubet tcc",
     "origin": "https://tcc.eu.com",
@@ -249,6 +243,12 @@
     "name": "nhà cái tinchat",
     "origin": "https://tinchat.info",
     "href": "https://tinchat.info/",
+    "waitTime": 45
+  },
+  "đá gà thomo baqua": {
+    "name": "đá gà thomo baqua",
+    "origin": "https://baqua.org.uk",
+    "href": "https://baqua.org.uk/",
     "waitTime": 45
   }
 }
