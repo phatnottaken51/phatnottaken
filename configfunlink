@@ -202,5 +202,11 @@
     "origin": "https://pollstation.uk",
     "href": "https://pollstation.uk/",
     "waitTime": 45
+  },
+  "12bet": {
+    "name": "12bet",
+    "origin": "https://coway.us.com",
+    "href": "https://coway.us.com/",
+    "waitTime": 45
   }
 }
