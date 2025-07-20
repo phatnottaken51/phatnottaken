@@ -118,5 +118,17 @@
     "origin": "https://afzoone.co.com",
     "href": "https://afzoone.co.com/",
     "waitTime": 45
+  },
+  "nhà cái xwin": {
+    "name": "nhà cái xwin",
+    "origin": "https://xwinner.io/",
+    "href": "https://xwinner.io/",
+    "waitTime": 45
+  },
+  "sunwin": {
+    "name": "sunwin",
+    "origin": "https://www.revive.uk.com",
+    "href": "https://www.revive.uk.com/",
+    "waitTime": 45
   }
 }
