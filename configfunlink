@@ -47,12 +47,6 @@
     "href": "https://dennys.eu.com/",
     "waitTime": 45
   },
-  "s666": {
-    "name": "s666",
-    "origin": "https://fireworks.eu.com",
-    "href": "https://fireworks.eu.com/",
-    "waitTime": 45
-  },
   "df999": {
     "name": "df999",
     "origin": "https://nhacaidf999.site",
@@ -243,6 +237,18 @@
     "name": "sv388 ph",
     "origin": "https://genericforlipitor.us.com",
     "href": "https://genericforlipitor.us.com/",
+    "waitTime": 45
+  },
+  "s666 cdef": {
+    "name": "s666 cdef",
+    "origin": "https://cdef7.ru.com",
+    "href": "https://cdef7.ru.com/",
+    "waitTime": 45
+  },
+  "s666 fireworks": {
+    "name": "s666 fireworks",
+    "origin": "https://fireworks.eu.com",
+    "href": "https://fireworks.eu.com/",
     "waitTime": 45
   }
 }
