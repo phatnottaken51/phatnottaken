@@ -130,5 +130,11 @@
     "origin": "https://xwinner.io",
     "href": "https://xwinner.io/",
     "waitTime": 45
+  },
+  "sunwin ooo": {
+    "name": "sunwin ooo",
+    "origin": "https://ihra.co.com",
+    "href": "https://ihra.co.com/",
+    "waitTime": 45
   }
 }
