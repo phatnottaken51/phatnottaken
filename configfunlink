@@ -220,5 +220,11 @@
     "origin": "https://amulet.in.net",
     "href": "https://amulet.in.net/",
     "waitTime": 45
+  },
+  "kubet ru": {
+    "name": "kubet ru",
+    "origin": "https://kubet.ru.com",
+    "href": "https://kubet.ru.com/",
+    "waitTime": 45
   }
 }
