@@ -5,12 +5,6 @@
     "href": "https://88bet.hiphop/cach-tinh-tien-bat-ty-so-bong-da/",
     "waitTime": 45
   },
-  "w88": {
-    "name": "W88",
-    "origin": "https://w88vt.com",
-    "href": "https://w88vt.com/",
-    "waitTime": 45
-  },
   "fun88": {
     "name": "Fun88",
     "origin": "https://fun88kyc.com",
@@ -147,6 +141,12 @@
     "name": "thabet john",
     "origin": "https://huobi.co.com",
     "href": "https://huobi.co.com/",
+    "waitTime": 45
+  },
+  "w88": {
+    "name": "w88",
+    "origin": "https://w88vt.com",
+    "href": "https://w88vt.com/",
     "waitTime": 45
   }
 }
