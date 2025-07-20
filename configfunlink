@@ -76,5 +76,11 @@
     "origin": "https://reasyn.io",
     "href": "https://reasyn.io/",
     "waitTime": 45
+  },
+  "đá gà trực tiếp": {
+    "name": "đá gà trực tiếp",
+    "origin": "https://baqua.org.uk",
+    "href": "https://baqua.org.uk/",
+    "waitTime": 45
   }
 }
