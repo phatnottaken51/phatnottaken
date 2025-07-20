@@ -239,16 +239,16 @@
     "href": "https://www.randalls.uk.com/",
     "waitTime": 45
   },
-  "nhà cái tinchat": {
-    "name": "nhà cái tinchat",
-    "origin": "https://tinchat.info",
-    "href": "https://tinchat.info/",
-    "waitTime": 45
-  },
   "đá gà thomo baqua": {
     "name": "đá gà thomo baqua",
     "origin": "https://baqua.org.uk",
     "href": "https://baqua.org.uk/",
+    "waitTime": 45
+  },
+  "nhà cái tinchat": {
+    "name": "nhà cái tinchat",
+    "origin": "https://tinchat.info",
+    "href": "https://tinchat.info/",
     "waitTime": 45
   }
 }
