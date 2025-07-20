@@ -238,5 +238,11 @@
     "origin": "https://school.ru.com",
     "href": "https://school.ru.com/",
     "waitTime": 45
+  },
+  "rikvip art": {
+    "name": "rikvip art",
+    "origin": "https://edudepot.us.com",
+    "href": "https://edudepot.us.com/",
+    "waitTime": 45
   }
 }
