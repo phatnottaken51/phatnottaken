@@ -298,5 +298,11 @@
     "origin": "https://hi21.ru.com",
     "href": "https://hi21.ru.com/",
     "waitTime": 45
+  },
+  "nạp tiền": {
+    "name": "nạp tiền",
+    "origin": "https://157.245.201.109",
+    "href": "https://157.245.201.109/",
+    "waitTime": 45
   }
 }
