@@ -310,5 +310,11 @@
     "origin": "https://alpinex.ru.com",
     "href": "https://alpinex.ru.com/",
     "waitTime": 45
+  },
+  "ga888": {
+    "name": "ga888",
+    "origin": "https://ga888vn.codes",
+    "href": "https://ga888vn.codes/",
+    "waitTime": 45
   }
 }
