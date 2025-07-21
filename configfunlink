@@ -304,5 +304,11 @@
     "origin": "https://157.245.201.109",
     "href": "https://157.245.201.109/",
     "waitTime": 45
+  },
+  "sv388 pinex": {
+    "name": "sv388 pinex",
+    "origin": "https://alpinex.ru.com",
+    "href": "https://alpinex.ru.com/",
+    "waitTime": 45
   }
 }
