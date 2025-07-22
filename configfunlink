@@ -311,12 +311,6 @@
     "href": "https://ga888vn.codes/",
     "waitTime": 45
   },
-  "kèo nhà cái solutions": {
-    "name": "kèo nhà cái solutions",
-    "origin": "https://keonhacai.solutions",
-    "href": "https://keonhacai.solutions/",
-    "waitTime": 45
-  },
   "df999 net": {
     "name": "df999 net",
     "origin": "https://nhacaidf999.net",
@@ -327,6 +321,12 @@
     "name": "df999 site",
     "origin": "https://nhacaidf999.site",
     "href": "https://nhacaidf999.site/",
+    "waitTime": 45
+  },
+  "kèo nhà cái solutions": {
+    "name": "kèo nhà cái solutions",
+    "origin": "https://keonhacai.solutions",
+    "href": "https://keonhacai.solutions/",
     "waitTime": 45
   }
 }
