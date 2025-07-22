@@ -340,5 +340,11 @@
     "origin": "https://www.gssi.uk.com",
     "href": "https://www.gssi.uk.com/",
     "waitTime": 45
+  },
+  "đá gà thomo jeff": {
+    "name": "đá gà thomo jeff",
+    "origin": "https://chrisjefferies.co.uk",
+    "href": "https://chrisjefferies.co.uk/",
+    "waitTime": 45
   }
 }
