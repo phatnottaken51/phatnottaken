@@ -370,5 +370,11 @@
     "origin": "https://zodiac.ru.com",
     "href": "https://zodiac.ru.com/",
     "waitTime": 45
+  },
+  "go88fc": {
+    "name": "go88fc",
+    "origin": "https://go88fc.com",
+    "href": "https://go88fc.com/",
+    "waitTime": 45
   }
 }
