@@ -1,10 +1,4 @@
 {
-  "188bet": {
-    "name": "188bet",
-    "origin": "https://88bet.hiphop",
-    "href": "https://88bet.hiphop/cach-tinh-tien-bat-ty-so-bong-da/",
-    "waitTime": 45
-  },
   "8xbet vina": {
     "name": "8xbet vina",
     "origin": "https://8xbetvina.com",
@@ -375,6 +369,18 @@
     "name": "go88fc",
     "origin": "https://go88fc.com",
     "href": "https://go88fc.com/",
+    "waitTime": 45
+  },
+  "188bet rehab": {
+    "name": "188bet rehab",
+    "origin": "https://survivance.io",
+    "href": "https://survivance.io/",
+    "waitTime": 45
+  },
+  "188bet hiphop": {
+    "name": "188bet hiphop",
+    "origin": "https://88bet.hiphop",
+    "href": "https://88bet.hiphop/",
     "waitTime": 45
   }
 }
