@@ -334,5 +334,11 @@
     "origin": "https://dsclab.io",
     "href": "https://dsclab.io/",
     "waitTime": 45
+  },
+  "sunwin gssi": {
+    "name": "sunwin gssi",
+    "origin": "https://www.gssi.uk.com",
+    "href": "https://www.gssi.uk.com/",
+    "waitTime": 45
   }
 }
