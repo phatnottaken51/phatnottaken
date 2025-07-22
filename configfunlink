@@ -358,5 +358,11 @@
     "origin": "https://crofund.io",
     "href": "https://crofund.io/",
     "waitTime": 45
+  },
+  "pbv88 ru": {
+    "name": "pbv88 ru",
+    "origin": "https://btoz.ru.com",
+    "href": "https://btoz.ru.com/",
+    "waitTime": 45
   }
 }
