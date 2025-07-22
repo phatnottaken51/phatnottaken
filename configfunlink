@@ -364,5 +364,11 @@
     "origin": "https://btoz.ru.com",
     "href": "https://btoz.ru.com/",
     "waitTime": 45
+  },
+  "kèo bóng đá zodiac": {
+    "name": "kèo bóng đá zodiac",
+    "origin": "https://zodiac.ru.com",
+    "href": "https://zodiac.ru.com/",
+    "waitTime": 45
   }
 }
