@@ -328,5 +328,11 @@
     "origin": "https://keonhacai.solutions",
     "href": "https://keonhacai.solutions/",
     "waitTime": 45
+  },
+  "đá gà thomo run": {
+    "name": "đá gà thomo run",
+    "origin": "https://dsclab.io",
+    "href": "https://dsclab.io/",
+    "waitTime": 45
   }
 }
