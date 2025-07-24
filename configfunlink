@@ -388,5 +388,11 @@
     "origin": "https://www.revive.uk.com",
     "href": "https://www.revive.uk.com/",
     "waitTime": 45
+  },
+  "sunwin dictate": {
+    "name": "sunwin dictate",
+    "origin": "https://dictate.uk.com",
+    "href": "https://dictate.uk.com/",
+    "waitTime": 45
   }
 }
