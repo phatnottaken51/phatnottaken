@@ -400,5 +400,11 @@
     "origin": "https://www.turnstile.uk.com",
     "href": "https://www.turnstile.uk.com/",
     "waitTime": 45
+  },
+  "az888 wiki": {
+    "name": "az888 wiki",
+    "origin": "https://az888.wiki",
+    "href": "https://az888.wiki/",
+    "waitTime": 45
   }
 }
