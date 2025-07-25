@@ -406,5 +406,11 @@
     "origin": "https://az888.wiki",
     "href": "https://az888.wiki/",
     "waitTime": 45
+  },
+  "sv388 jason": {
+    "name": "sv388 jason",
+    "origin": "https://jason.us.org",
+    "href": "https://jason.us.org/",
+    "waitTime": 45
   }
 }
