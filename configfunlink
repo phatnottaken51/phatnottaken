@@ -418,5 +418,11 @@
     "origin": "https://calc.ru.com",
     "href": "https://calc.ru.com/",
     "waitTime": 45
+  },
+  "vn999 five": {
+    "name": "vn999 five",
+    "origin": "https://five.ru.com",
+    "href": "https://five.ru.com/",
+    "waitTime": 45
   }
 }
