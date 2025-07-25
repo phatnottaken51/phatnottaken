@@ -161,12 +161,6 @@
     "href": "https://edudepot.us.com/",
     "waitTime": 45
   },
-  "fun88": {
-    "name": "fun88",
-    "origin": "https://fun88kyc.com",
-    "href": "https://fun88kyc.com/",
-    "waitTime": 45
-  },
   "kubet casino": {
     "name": "kubet casino",
     "origin": "https://www.randalls.uk.com",
@@ -411,6 +405,18 @@
     "name": "sv388 jason",
     "origin": "https://jason.us.org",
     "href": "https://jason.us.org/",
+    "waitTime": 45
+  },
+  "fun88 kyc": {
+    "name": "fun88 kyc",
+    "origin": "https://fun88kyc.com",
+    "href": "https://fun88kyc.com/",
+    "waitTime": 45
+  },
+  "fun88 calc": {
+    "name": "fun88 calc",
+    "origin": "https://calc.ru.com",
+    "href": "https://calc.ru.com/",
     "waitTime": 45
   }
 }
