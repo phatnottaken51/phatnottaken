@@ -424,5 +424,11 @@
     "origin": "https://five.ru.com",
     "href": "https://five.ru.com/",
     "waitTime": 45
+  },
+  "tỷ lệ kèo nhà cái sa": {
+    "name": "tỷ lệ kèo nhà cái sa",
+    "origin": "https://tylekeonhacai.sa.com",
+    "href": "https://tylekeonhacai.sa.com/",
+    "waitTime": 45
   }
 }
