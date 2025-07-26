@@ -425,8 +425,14 @@
     "href": "https://five.ru.com/",
     "waitTime": 45
   },
-  "tỷ lệ kèo nhà cái sa": {
-    "name": "tỷ lệ kèo nhà cái sa",
+  "kèo nhà cái cocoface": {
+    "name": "kèo nhà cái cocoface",
+    "origin": "https://cocoface.co.uk",
+    "href": "https://cocoface.co.uk/",
+    "waitTime": 45
+  },
+  "kèo nhà cái sa": {
+    "name": "kèo nhà cái sa",
     "origin": "https://tylekeonhacai.sa.com",
     "href": "https://tylekeonhacai.sa.com/",
     "waitTime": 45
