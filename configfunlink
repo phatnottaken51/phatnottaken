@@ -460,5 +460,11 @@
     "origin": "https://redhorseoil.com",
     "href": "https://redhorseoil.com/",
     "waitTime": 45
+  },
+  "8xbet solar": {
+    "name": "8xbet solar",
+    "origin": "https://intelligentsolar.uk.com",
+    "href": "https://intelligentsolar.uk.com/",
+    "waitTime": 45
   }
 }
