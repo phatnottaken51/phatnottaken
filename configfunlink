@@ -317,12 +317,6 @@
     "href": "https://chrisjefferies.co.uk/",
     "waitTime": 45
   },
-  "vinhomes đan phượng": {
-    "name": "vinhomes đan phượng",
-    "origin": "https://vinhomesdanphuong.land/https://vinhomesdanphuong.land",
-    "href": "https://vinhomesdanphuong.land/",
-    "waitTime": 45
-  },
   "e2bet crofund": {
     "name": "e2bet crofund",
     "origin": "https://crofund.io",
@@ -465,6 +459,12 @@
     "name": "12bet bpd",
     "origin": "https://bpd.uk.com",
     "href": "https://bpd.uk.com/",
+    "waitTime": 45
+  },
+  "vinhomes park": {
+    "name": "vinhomes park",
+    "origin": "https://vinhomesdanphuong.land",
+    "href": "https://vinhomesdanphuong.land/",
     "waitTime": 45
   }
 }
