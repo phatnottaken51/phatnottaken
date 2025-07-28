@@ -191,12 +191,6 @@
     "href": "https://optidigital.ca/",
     "waitTime": 45
   },
-  "12bet bpd": {
-    "name": "12bet bpd",
-    "origin": "https://bpd.uk.com",
-    "href": "https://bpd.uk.com/",
-    "waitTime": 45
-  },
   "sv388 ph": {
     "name": "sv388 ph",
     "origin": "https://genericforlipitor.us.com",
@@ -465,6 +459,12 @@
     "name": "12bet coway",
     "origin": "https://coway.us.com",
     "href": "https://coway.us.com/",
+    "waitTime": 45
+  },
+  "12bet bpd": {
+    "name": "12bet bpd",
+    "origin": "https://bpd.uk.com",
+    "href": "https://bpd.uk.com/",
     "waitTime": 45
   }
 }
