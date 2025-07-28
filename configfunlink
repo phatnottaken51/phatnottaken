@@ -197,12 +197,6 @@
     "href": "https://bpd.uk.com/",
     "waitTime": 45
   },
-  "12bet coway": {
-    "name": "121bet coway",
-    "origin": "https://coway.us.com",
-    "href": "https://coway.us.com/",
-    "waitTime": 45
-  },
   "sv388 ph": {
     "name": "sv388 ph",
     "origin": "https://genericforlipitor.us.com",
@@ -465,6 +459,12 @@
     "name": "8xbet solar",
     "origin": "https://intelligentsolar.uk.com",
     "href": "https://intelligentsolar.uk.com/",
+    "waitTime": 45
+  },
+  "12bet coway": {
+    "name": "12bet coway",
+    "origin": "https://coway.us.com",
+    "href": "https://coway.us.com/",
     "waitTime": 45
   }
 }
