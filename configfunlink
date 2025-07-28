@@ -119,12 +119,6 @@
     "href": "https://teka.ru.com/",
     "waitTime": 45
   },
-  "daga88": {
-    "name": "daga88",
-    "origin": "https://pollstation.uk",
-    "href": "https://pollstation.uk/",
-    "waitTime": 45
-  },
   "đá gà thomo hippo": {
     "name": "đá gà thomo hippo",
     "origin": "https://hippostudios.co.uk",
@@ -459,6 +453,12 @@
     "name": "daga88 kha",
     "origin": "https://gurkha200.co.uk",
     "href": "https://gurkha200.co.uk/",
+    "waitTime": 45
+  },
+  "đá gà thomo horse": {
+    "name": "đá gà thomo horse",
+    "origin": "https://redhorseoil.com",
+    "href": "https://redhorseoil.com/",
     "waitTime": 45
   }
 }
