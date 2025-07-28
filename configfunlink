@@ -448,5 +448,11 @@
     "origin": "https://ragroofplayers.co.uk",
     "href": "https://ragroofplayers.co.uk/",
     "waitTime": 45
+  },
+  "betvisa day": {
+    "name": "betvisa day",
+    "origin": "https://absa-bank.eu.com",
+    "href": "https://absa-bank.eu.com/",
+    "waitTime": 45
   }
 }
