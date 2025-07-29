@@ -53,12 +53,6 @@
     "href": "https://xwinner.io/",
     "waitTime": 45
   },
-  "sunwin ooo": {
-    "name": "sunwin ooo",
-    "origin": "https://ihra.co.com",
-    "href": "https://ihra.co.com/",
-    "waitTime": 45
-  },
   "sunwin vl": {
     "name": "sunwin vl",
     "origin": "https://sunvl.win",
@@ -471,6 +465,12 @@
     "name": "w88 vt",
     "origin": "https://w88vt.com",
     "href": "https://w88vt.com/",
+    "waitTime": 45
+  },
+  "sunwin hra": {
+    "name": "sunwin hra",
+    "origin": "https://ihra.co.com",
+    "href": "https://ihra.co.com/",
     "waitTime": 45
   }
 }
