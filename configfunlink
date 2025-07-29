@@ -71,12 +71,6 @@
     "href": "https://huobi.co.com/",
     "waitTime": 45
   },
-  "w88": {
-    "name": "w88",
-    "origin": "https://w88vt.com",
-    "href": "https://w88vt.com/",
-    "waitTime": 45
-  },
   "win shopline": {
     "name": "win shopline",
     "origin": "https://e-shopline.eu.com",
@@ -465,6 +459,18 @@
     "name": "vinhomes park",
     "origin": "https://vinhomesdanphuong.land",
     "href": "https://vinhomesdanphuong.land/",
+    "waitTime": 45
+  },
+  "w88 eu": {
+    "name": "w88 eu",
+    "origin": "https://btl.eu.com",
+    "href": "https://btl.eu.com/",
+    "waitTime": 45
+  },
+  "w88 vt": {
+    "name": "w88 vt",
+    "origin": "https://w88vt.com",
+    "href": "https://w88vt.com/",
     "waitTime": 45
   }
 }
