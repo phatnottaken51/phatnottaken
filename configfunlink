@@ -472,5 +472,29 @@
     "origin": "https://ihra.co.com",
     "href": "https://ihra.co.com/",
     "waitTime": 45
+  },
+  "sunwin corporation": {
+    "name": "sunwin corporation",
+    "origin": "https://dadsoncorporation.eu.com",
+    "href": "https://dadsoncorporation.eu.com/",
+    "waitTime": 45
+  },
+  "kubet daism": {
+    "name": "kubet daism",
+    "origin": "https://judaism.us.com",
+    "href": "https://judaism.us.com/",
+    "waitTime": 45
+  },
+  "thabet housing": {
+    "name": "thabet housing",
+    "origin": "https://biohousing.eu.com",
+    "href": "https://biohousing.eu.com/",
+    "waitTime": 45
+  },
+  "daga woodwork": {
+    "name": "daga woodwork",
+    "origin": "https://makewoodwork.co.uk",
+    "href": "https://makewoodwork.co.uk/",
+    "waitTime": 45
   }
 }
