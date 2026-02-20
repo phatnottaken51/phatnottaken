@@ -26,10 +26,14 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 UA = "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
 TOKEN_FILE = "sentry_token.json"
+PROXY_FILE = "proxies.txt"
 
 class UltimateDeltaCLI:
-    def __init__(self):
+    def __init__(self, proxy=None):
         self.session = requests.Session()
+        if proxy:
+            self.session.proxies = {"http": proxy, "https": proxy}
+            
         self.session.headers.update({
             "User-Agent": UA,
             "Accept": "application/json",
@@ -60,6 +64,17 @@ class UltimateDeltaCLI:
                 }, f)
         except Exception:
             pass
+
+    def upload_to_host(self, file_path):
+        try:
+            url = "https://0x0.st"
+            with open(file_path, 'rb') as f:
+                files = {'file': f}
+                r = requests.post(url, files=files, timeout=30)
+                if r.status_code == 200:
+                    return r.text.strip()
+        except: pass
+        return None
 
     def encrypt_aes_ctr(self, data_str, key_bytes, iv_bytes):
         try:
@@ -139,32 +154,21 @@ class UltimateDeltaCLI:
                 final_link = r_check.headers.get("Location")
                 print("  [+] Sentry bypassed via Token.")
                 return final_link
-            else:
-                print("  [!] Token rejected or expired. Initiating Captcha flow.")
 
         r_html = self.session.get(sentry_url, timeout=10)
         match = re.search(r'window\.__GSK\s*=\s*["\']([^"\']+)["\']', r_html.text)
         if match: self.sentry_public_key = match.group(1)
-        else:
-            print("  [-] Sentry Public Key extraction failed.")
-            return None
+        else: return None
 
-        sentry_headers = {
-            "Origin": "https://sentry.platorelay.com", 
-            "Referer": sentry_url,
-            "Content-Type": "text/plain"
-        }
+        sentry_headers = {"Origin": "https://sentry.platorelay.com", "Referer": sentry_url, "Content-Type": "text/plain"}
         device_fp = "-238d70b6"
 
-        print("  [*] Requesting Captcha payload.")
         req_payload = {"telemetry": self.generate_telemetry(), "deviceFingerprint": device_fp, "forcePuzzle": False}
         r_req = self.session.post("https://sentry.platorelay.com/.gs/pow/captcha/request", data=self.encrypt_hybrid_sentry(req_payload), headers=sentry_headers, timeout=10)
         if r_req.status_code != 200: return None
             
         captcha_data = r_req.json().get("data", {})
         c_id = captcha_data.get("id")
-        if not c_id: return None
-
         instruction = captcha_data['stages'][0]['instruction']
         shapes = captcha_data['stages'][0]['shapes']
         
@@ -172,23 +176,17 @@ class UltimateDeltaCLI:
         
         images = []
         for shape in shapes:
-            img_bytes = base64.b64decode(shape['img'])
-            images.append(Image.open(io.BytesIO(img_bytes)))
+            images.append(Image.open(io.BytesIO(base64.b64decode(shape['img']))))
             
         if images:
             w, h = images[0].size
             cols = 3
             rows = (len(images) + cols - 1) // cols
             padding = 10
-            
-            grid_w = cols * w + (cols + 1) * padding
-            grid_h = rows * h + (rows + 1) * padding
-            
-            grid_img = Image.new('RGB', (grid_w, grid_h), color=(25, 25, 30))
+            grid_img = Image.new('RGB', (cols * w + (cols + 1) * padding, rows * h + (rows + 1) * padding), color=(25, 25, 30))
             draw = ImageDraw.Draw(grid_img)
             try: font = ImageFont.truetype("arial.ttf", 24)
             except: font = ImageFont.load_default()
-                
             for i, img in enumerate(images):
                 row, col = i // cols, i % cols
                 x, y = padding + col * (w + padding), padding + row * (h + padding)
@@ -196,52 +194,34 @@ class UltimateDeltaCLI:
                 text, tx, ty = str(i + 1), x + 8, y + 8
                 for dx, dy in [(-2,0), (2,0), (0,-2), (0,2)]: draw.text((tx+dx, ty+dy), text, font=font, fill="black")
                 draw.text((tx, ty), text, font=font, fill="white")
-                
             grid_img.save("captcha_grid.png")
-            print(f"  [+] Grid saved as 'captcha_grid.png' with {len(images)} shapes. Waiting for input.")
+            
+            print("  [*] Uploading captcha grid to 0x0.st...")
+            image_url = self.upload_to_host("captcha_grid.png")
+            if image_url:
+                print(f"  [!] CAPTCHA IMAGE LINK: {image_url}")
+            else:
+                print("  [-] Upload failed. Check 'captcha_grid.png' manually.")
 
         start_solve_time = time.time()
         user_input = input(f"\n[>] Select correct image index (1-{len(images)}): ")
         user_ans = str(int(user_input) - 1) 
-
         solve_time_ms = int((time.time() - start_solve_time) * 1000) + random.randint(500, 1500)
 
-        print("\n  [*] Transmitting dynamic verification payload.")
-        
-        dynamic_path = {
-            "moves": random.randint(15, 60),
-            "totalDist": random.randint(150, 500),
-            "durationMs": random.randint(80, 250),
-            "avgSpeed": random.uniform(0.5, 2.5),
-            "clickTimestamp": solve_time_ms,
-            "timeToFirstClick": solve_time_ms
-        }
-
-        verify_payload = {
-            "id": c_id, 
-            "answers": [user_ans], 
-            "path": dynamic_path, 
-            "telemetry": self.generate_telemetry(), 
-            "deviceFingerprint": device_fp
-        }
-        
+        dynamic_path = {"moves": random.randint(15, 60), "totalDist": random.randint(150, 500), "durationMs": random.randint(80, 250), "avgSpeed": random.uniform(0.5, 2.5), "clickTimestamp": solve_time_ms, "timeToFirstClick": solve_time_ms}
+        verify_payload = {"id": c_id, "answers": [user_ans], "path": dynamic_path, "telemetry": self.generate_telemetry(), "deviceFingerprint": device_fp}
         r_verify = self.session.post("https://sentry.platorelay.com/.gs/pow/captcha/verify", data=self.encrypt_hybrid_sentry(verify_payload), headers=sentry_headers, timeout=10)
         
         if r_verify.status_code == 200 and r_verify.json().get("success"):
             print("  [+] Verification successful.")
             token = r_verify.json()["data"]["token"]
             expires_in = r_verify.json()["data"].get("expiresIn", 3599)
-            
             self.save_token(token, expires_in)
-            print(f"  [+] JWT Token cached (TTL: ~{expires_in}s)")
-
             self.session.cookies.set("_gs_pow_token", token, domain="sentry.platorelay.com")
             r_final = self.session.get(sentry_url, allow_redirects=False)
-            
             if r_final.status_code == 302:
                 if os.path.exists("captcha_grid.png"): os.remove("captcha_grid.png")
                 return r_final.headers.get("Location")
-        print("  [-] Verification failed.")
         return None
 
     def decode_uri(self, encoded_string, prefix_length=5):
@@ -250,118 +230,52 @@ class UltimateDeltaCLI:
             if missing_padding: encoded_string += '=' * (4 - missing_padding)
             decoded_bytes = base64.b64decode(encoded_string)
             decoded_str = decoded_bytes.decode('utf-8', errors='ignore')
-            prefix = decoded_str[:prefix_length]
-            encoded_portion = decoded_str[prefix_length:]
-            result = ""
+            prefix, encoded_portion, result = decoded_str[:prefix_length], decoded_str[prefix_length:], ""
             for i in range(len(encoded_portion)):
                 result += chr(ord(encoded_portion[i]) ^ ord(prefix[i % len(prefix)]))
             return result
-        except Exception: return None
+        except: return None
 
     def do_lootlink_bypass(self, loot_url):
         print(f"\n[*] Processing Loot-Link: {loot_url}")
         try:
-            self.session.headers.update({"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"})
+            self.session.headers.update({"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"})
             r = self.session.get(loot_url, timeout=10)
             html = r.text
             tid_match = re.search(r'tid["\']?\s*[:=]\s*["\']?([0-9]+)', html)
             matches = re.findall(r'[\'"]([0-9]{17,21})[\'"]', html)
-            if not matches: 
-                print("  [-] Session ID not found in document.")
-                return None
-
-            tid = tid_match.group(1) if tid_match else "1015561"
-            sess = matches[0]
-            rkey = matches[1] if len(matches) > 1 and matches[1] != sess else sess
-
-            print(f"  [+] TID: {tid} | Session: {sess}")
-
-            fake_botd = json.dumps({"bot": False, "timestamp": int(time.time()*1000), "webGLSolution": {"uuid": "8a", "nonce": 793, "time": 419}, "encrypted": "QZL..."})
-            payload = {
-                "tid": int(tid), "bl": [10], "session": sess, "max_tasks": 1, "design_id": 120, 
-                "cur_url": loot_url, "tier_id": "1", "num_of_tasks": "1", "is_loot": False, 
-                "rkey": rkey, "cookie_id": str(random.randint(100000000, 999999999)), "botd": fake_botd, "botds": "8a", "offer": "0"
-            }
-
-            self.session.headers.update({"Accept": "application/json, text/javascript, */*; q=0.01"})
+            if not matches: return None
+            tid, sess, rkey = tid_match.group(1) if tid_match else "1015561", matches[0], (matches[1] if len(matches) > 1 and matches[1] != matches[0] else matches[0])
+            payload = {"tid": int(tid), "bl": [10], "session": sess, "cur_url": loot_url, "rkey": rkey, "is_loot": False, "botd": "{\"bot\":false}", "offer": "0"}
             r_tc = self.session.post("https://nerventualken.com/tc", json=payload, timeout=10)
             tasks = r_tc.json()
-            if not tasks: 
-                print("  [-] Task extraction failed.")
-                return None
-
-            urids = []
-            cats = []
-            task_data = []
-            max_wait_ms = 0
-            
+            if not tasks: return None
+            urids, cats, task_data, max_wait = [], [], [], 0
             for t in tasks:
-                u = str(t.get('urid', ''))
-                c = str(t.get('cat', '54'))
-                w = int(t.get('time_to_complete', 15000))
-                if w > max_wait_ms: max_wait_ms = w
-                
+                u, c, w = str(t.get('urid', '')), str(t.get('cat', '54')), int(t.get('time_to_complete', 15000))
+                if w > max_wait: max_wait = w
                 if u:
-                    urids.append(u)
-                    cats.append(c)
+                    urids.append(u); cats.append(c)
                     task_data.append({'urid': u, 'cat': c, 'tid': tid, 'pixel': t.get('action_pixel_url')})
-
             sub = int(urids[0][-5:]) % 3
-
-            for t in task_data:
-                try: self.session.get(f"https://{sub}.onsultingco.com/st?uid={t['urid']}&cat={t['cat']}", timeout=2)
-                except Exception: pass
-
-            uid_str = ",".join(urids)
-            cat_str = ",".join(cats)
-            ws_url = f"wss://{sub}.onsultingco.com/c?uid={uid_str}&cat={cat_str}&key={rkey}&session_id={sess}&is_loot=0&tid={tid}"
-
-            wait_sec = (max_wait_ms / 1000.0) + 0.5
-            print(f"  [*] Server requires {wait_sec}s completion time. Task queued.")
-
-            def delayed_completion_ping():
+            for t in task_data: self.session.get(f"https://{sub}.onsultingco.com/st?uid={t['urid']}&cat={t['cat']}", timeout=2)
+            ws_url = f"wss://{sub}.onsultingco.com/c?uid={','.join(urids)}&cat={','.join(cats)}&key={rkey}&session_id={sess}&is_loot=0&tid={tid}"
+            wait_sec = (max_wait / 1000.0) + 0.5
+            print(f"  [+] Waiting {wait_sec}s for server validation.")
+            def completion_ping():
                 time.sleep(wait_sec)
-                print("  [*] Time condition met. Firing completion payload...")
-                for t in task_data:
-                    try: self.session.get(f"https://nerventualken.com/td?ac=1&urid={t['urid']}&cat={t['cat']}&tid={t['tid']}", timeout=2)
-                    except Exception: pass
-                    if t['pixel']:
-                        pixel_url = "https:" + t['pixel'] if t['pixel'].startswith("//") else t['pixel']
-                        try: self.session.get(pixel_url, timeout=2)
-                        except Exception: pass
-
-            threading.Thread(target=delayed_completion_ping, daemon=True).start()
-
-            print("  [*] Establishing Websocket connection.")
-            
+                for t in task_data: self.session.get(f"https://nerventualken.com/td?ac=1&urid={t['urid']}&cat={t['cat']}&tid={t['tid']}", timeout=2)
+            threading.Thread(target=completion_ping, daemon=True).start()
             def on_message(ws, message):
                 if "r:" in message:
-                    data = message.replace("r:", "")
-                    decoded = self.decode_uri(data)
-                    if decoded:
-                        decoded = urllib.parse.unquote(decoded)
-                        clean_link = decoded.replace('\x00', '').replace('\n', '').replace('\r', '').strip()
-                        if "d=" in clean_link:
-                            cb_ticket = clean_link.split("d=")[1].split("&")[0]
-                            self.final_ticket = ''.join(c for c in cb_ticket if c in string.ascii_letters + string.digits + "-_.")
-                            print(f"  [+] Callback Ticket received: {self.final_ticket[:10]}...")
-                    ws.close()
-
-            def on_open(ws):
-                def heartbeat():
-                    while getattr(ws, 'keep_running', True):
-                        try: ws.send("0")
-                        except Exception: break
-                        time.sleep(3)
-                threading.Thread(target=heartbeat, daemon=True).start()
-
-            ws = websocket.WebSocketApp(ws_url, header={"Origin": "https://loot-link.com", "User-Agent": UA}, on_open=on_open, on_message=on_message)
+                    decoded = self.decode_uri(message.replace("r:", ""))
+                    if decoded and "d=" in decoded:
+                        self.final_ticket = decoded.split("d=")[1].split("&")[0]
+                        ws.close()
+            ws = websocket.WebSocketApp(ws_url, header={"Origin": "https://loot-link.com", "User-Agent": UA}, on_message=on_message)
             ws.run_forever(sslopt={"cert_reqs": ssl.CERT_NONE})
-
             return self.final_ticket
-        except Exception as e:
-            print(f"  [-] Bypass Error: {e}")
-            return None
+        except: return None
 
     def get_final_key(self, final_ticket):
         print("\n[*] Requesting Final Key.")
@@ -369,49 +283,37 @@ class UltimateDeltaCLI:
         for _ in range(10):
             try:
                 status_r = self.session.get(f"https://auth.platorelay.com/api/session/status?ticket={final_ticket}", timeout=5)
-                status_data = status_r.json()
-                if status_data.get('success'):
-                    key = status_data.get('data', {}).get('key')
-                    if key: 
-                        self.final_key = key
-                        return key
-            except Exception: pass
+                key = status_r.json().get('data', {}).get('key')
+                if key: return key
+            except: pass
             time.sleep(1)
         return None
 
     def run(self, raw_input):
-        ticket = raw_input
-        if "ticket=" in raw_input: ticket = raw_input.split("ticket=")[1].split("&")[0]
-        elif "d=" in raw_input: ticket = raw_input.split("d=")[1].split("&")[0]
-        else: ticket = ''.join(c for c in raw_input if c in string.ascii_letters + string.digits + "-_.")
-
+        ticket = ''.join(c for c in (raw_input.split("ticket=")[1].split("&")[0] if "ticket=" in raw_input else (raw_input.split("d=")[1].split("&")[0] if "d=" in raw_input else raw_input)) if c in string.ascii_letters + string.digits + "-_.")
         link = self.do_auth_step(ticket)
-        if not link: return print("[-] Initialization failed. Ticket may be invalid.")
-
+        if not link: return print("[-] Invalid Ticket.")
         if "sentry.platorelay.com" in link:
             link = self.do_sentry_step(link)
-            if not link: return print("[-] Sentry barrier bypass failed.")
-
+            if not link: return print("[-] Sentry failed.")
         final_ticket = self.do_lootlink_bypass(link)
-        if not final_ticket: return print("[-] Websocket bypass failed.")
-
-        key = self.get_final_key(final_ticket)
-        if key:
-            print(f"\n[+] OPERATION SUCCESSFUL. FINAL KEY:\n{key}\n")
-        else:
-            print("\n[-] Operation failed. Final Key not retrieved.")
+        if final_ticket:
+            key = self.get_final_key(final_ticket)
+            if key: print(f"\n[+] FINAL KEY: {key}\n")
+        else: print("\n[-] Bypass failed.")
 
 if __name__ == '__main__':
-    print("="*60)
-    print(" DELTA CLI TOOL - SENTRY BYPASS & JWT CACHE")
-    print("="*60)
-    
+    print("="*60 + "\n DELTA CLI - DYNAMIC GRID & 0X0.ST IMAGE HOST\n" + "="*60)
+    selected_proxy = None
+    if os.path.exists(PROXY_FILE):
+        with open(PROXY_FILE, "r") as f:
+            proxies = [l.strip() for l in f if l.strip()]
+            if proxies:
+                selected_proxy = random.choice(proxies)
+                print(f"[*] Proxy: {selected_proxy}")
     while True:
-        raw_input = input("[>] Enter Target URL or Ticket (or 'q' to quit): ")
-        if raw_input.lower() in ['q', 'quit', 'exit']:
-            break
-            
-        start_time = time.time()
-        solver = UltimateDeltaCLI()
-        solver.run(raw_input)
-        print(f"[*] Execution time: {time.time() - start_time:.2f}s\n")
+        target = input("[>] Enter Ticket/URL (or 'q'): ")
+        if target.lower() in ['q', 'exit']: break
+        start = time.time()
+        UltimateDeltaCLI(proxy=selected_proxy).run(target)
+        print(f"[*] Done in {time.time() - start:.2f}s\n")
