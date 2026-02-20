@@ -177,9 +177,14 @@ class UltimateDeltaCLI:
             
         if images:
             w, h = images[0].size
-            cols, rows = 3, 2
+            cols = 3
+            rows = (len(images) + cols - 1) // cols
             padding = 10
-            grid_img = Image.new('RGB', (cols * w + (cols + 1) * padding, rows * h + (rows + 1) * padding), color=(25, 25, 30))
+            
+            grid_w = cols * w + (cols + 1) * padding
+            grid_h = rows * h + (rows + 1) * padding
+            
+            grid_img = Image.new('RGB', (grid_w, grid_h), color=(25, 25, 30))
             draw = ImageDraw.Draw(grid_img)
             try: font = ImageFont.truetype("arial.ttf", 24)
             except: font = ImageFont.load_default()
@@ -193,13 +198,33 @@ class UltimateDeltaCLI:
                 draw.text((tx, ty), text, font=font, fill="white")
                 
             grid_img.save("captcha_grid.png")
-            print("  [+] Grid saved as 'captcha_grid.png'. Waiting for input.")
+            print(f"  [+] Grid saved as 'captcha_grid.png' with {len(images)} shapes. Waiting for input.")
 
-        user_input = input(f"\n[>] Select correct image index (1-6): ")
+        start_solve_time = time.time()
+        user_input = input(f"\n[>] Select correct image index (1-{len(images)}): ")
         user_ans = str(int(user_input) - 1) 
 
-        print("\n  [*] Transmitting verification payload.")
-        verify_payload = {"id": c_id, "answers": [user_ans], "path": {"moves": 1, "totalDist": 0, "durationMs": 95, "avgSpeed": 0, "clickTimestamp": 10113, "timeToFirstClick": 10113}, "telemetry": self.generate_telemetry(), "deviceFingerprint": device_fp}
+        solve_time_ms = int((time.time() - start_solve_time) * 1000) + random.randint(500, 1500)
+
+        print("\n  [*] Transmitting dynamic verification payload.")
+        
+        dynamic_path = {
+            "moves": random.randint(15, 60),
+            "totalDist": random.randint(150, 500),
+            "durationMs": random.randint(80, 250),
+            "avgSpeed": random.uniform(0.5, 2.5),
+            "clickTimestamp": solve_time_ms,
+            "timeToFirstClick": solve_time_ms
+        }
+
+        verify_payload = {
+            "id": c_id, 
+            "answers": [user_ans], 
+            "path": dynamic_path, 
+            "telemetry": self.generate_telemetry(), 
+            "deviceFingerprint": device_fp
+        }
+        
         r_verify = self.session.post("https://sentry.platorelay.com/.gs/pow/captcha/verify", data=self.encrypt_hybrid_sentry(verify_payload), headers=sentry_headers, timeout=10)
         
         if r_verify.status_code == 200 and r_verify.json().get("success"):
