@@ -26,7 +26,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 UA = "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
 TOKEN_FILE = "sentry_token.json"
-GEMINI_API_KEY = "AIzaSyCVbThkpP7PPOuPEUT5cU2HeSQtKqV0Qz4"
+GEMINI_API_KEY = ""
 
 class UltimateDeltaCLI:
     def __init__(self):
@@ -386,7 +386,19 @@ class UltimateDeltaCLI:
                 threading.Thread(target=heartbeat, daemon=True).start()
 
             ws = websocket.WebSocketApp(ws_url, header={"Origin": "https://loot-link.com", "User-Agent": UA}, on_open=on_open, on_message=on_message)
+            
+            timeout_event = threading.Event()
+            kill_timer = wait_sec + 15
+            
+            def ws_timeout():
+                if not timeout_event.wait(kill_timer):
+                    print(f"  [-] Websocket Timeout ({kill_timer}s). Server refused to send ticket.")
+                    ws.close()
+
+            threading.Thread(target=ws_timeout, daemon=True).start()
+            
             ws.run_forever(sslopt={"cert_reqs": ssl.CERT_NONE})
+            timeout_event.set()
 
             return self.final_ticket
         except Exception as e:
